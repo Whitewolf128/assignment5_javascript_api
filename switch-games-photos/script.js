@@ -19,11 +19,11 @@ async function displayAsyncCall()
 
 displayAsyncCall();
 
-async function fetchGameData()
+async function fetchSwitchGameData()
 {
     try
     {
-        const resp = await fetch('https://api.steampowered.com/ISteamApps/GetAppList/v0002/?key=STEAMKEY&format=json');
+        const resp = await fetch('https://api.sampleapis.com/switch/games');
         
         if(!resp.ok)
         {
@@ -37,8 +37,26 @@ async function fetchGameData()
     }
     catch(error)
     {
-        console.error("Error fetching game Data: ", error)
+        console.error("Error fetching game Data: ", error);
     }
 }
 
-fetchGameData();
+fetchSwitchGameData();
+
+const myPromise = new Promise((resolve) =>
+{
+    const success = true;
+
+    if(success)
+    {
+        resolve("Promise is resolved successfully");
+    }
+    else
+    {
+        reject("Promise is rejected");
+    }
+});
+
+myPromise
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
