@@ -68,16 +68,16 @@ async function fetchSwitchAmiiboData()
         //the way the content displays 
         const selectedItem = numberedData.find(item => item.number == num);
         outputDiv.innerHTML = selectedItem
-            ? `<p>ID: ${JSON.stringify(selectedItem.number)}</p>
-            <p>Amiibo series: ${JSON.stringify(selectedItem.amiiboSeries)}</p>
-            <p>Character: ${JSON.stringify(selectedItem.character)}</p>
-            <p>Game Series: ${JSON.stringify(selectedItem.gameSeries)}</p>
-            <p>Head: ${JSON.stringify(selectedItem.head)}</p>
-            <p>Image: ${JSON.stringify(selectedItem.image)}</p>
-            <p>Name: ${JSON.stringify(selectedItem.name)}</p>
-            <p>Release: ${JSON.stringify(selectedItem.release)}</p>
-            <p>Tail: ${JSON.stringify(selectedItem.tail)}</p>
-            <p>Type: ${JSON.stringify(selectedItem.type)}</p>`
+            ? `<p><stron>ID:</strong> ${JSON.stringify(selectedItem.number)}</p>
+            <p><strong>Amiibo series:</strong> ${JSON.stringify(selectedItem.amiiboSeries)}</p>
+            <p><strong>Character:</strong> ${JSON.stringify(selectedItem.character)}</p>
+            <p><strong>Game Series:</strong> ${JSON.stringify(selectedItem.gameSeries)}</p>
+            <p><strong>Head:</strong> ${JSON.stringify(selectedItem.head)}</p>
+            <p><strong>Image:</strong> ${JSON.stringify(selectedItem.image)}</p>
+            <p><strong>Name:</strong> ${JSON.stringify(selectedItem.name)}</p>
+            <p><strong>Release:</strong> ${JSON.stringify(selectedItem.release)}</p>
+            <p><strong>Tail:</strong> ${JSON.stringify(selectedItem.tail)}</p>
+            <p><strong>Type:</strong> ${JSON.stringify(selectedItem.type)}</p>`
             //If its less than 0 and more than the array length it will display this message plus the entered value
             : `<p>No item found for number ${num}</p>`;
     }
