@@ -75,7 +75,10 @@ async function fetchSwitchAmiiboData()
             <p><strong>Head:</strong> ${JSON.stringify(selectedItem.head)}</p>
             <p><strong>Image:</strong> ${JSON.stringify(selectedItem.image)}</p>
             <p><strong>Name:</strong> ${JSON.stringify(selectedItem.name)}</p>
-            <p><strong>Release:</strong> ${JSON.stringify(selectedItem.release)}</p>
+            <p><strong>Released in Austrailia:</strong> ${JSON.stringify(selectedItem.release.au)}</p>
+            <p><strong>Released in Europe:</strong> ${JSON.stringify(selectedItem.release.eu)}</p>
+            <p><strong>Released in Japan:</strong> ${JSON.stringify(selectedItem.release.jp)}</p>
+            <p><strong>Released in North America:</strong> ${JSON.stringify(selectedItem.release.na)}</p>
             <p><strong>Tail:</strong> ${JSON.stringify(selectedItem.tail)}</p>
             <p><strong>Type:</strong> ${JSON.stringify(selectedItem.type)}</p>`
             //If its less than 0 and more than the array length it will display this message plus the entered value
