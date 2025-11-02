@@ -3,21 +3,24 @@ function load(){
 
     document.getElementById("search").addEventListener("click", fetchSwitchAmiiboData);
 }
+
 //A function that initiliazes the form
 async function simulateAsyncOperation() 
 {
     return new Promise((resolve) =>
 
-    //delays the load
+    //delays the content and console
     setTimeout(() =>
         {
             resolve("Data fetched after waiting (await) for 10 seconds or so... #1");
         }, 10000)
     );
 }
+
 //A function that displays as the first async function is called
 async function displayAsyncCall() 
 {
+
     console.log("Starting async operation... #1");
     const result = await simulateAsyncOperation();
     console.log(result);
@@ -28,6 +31,7 @@ displayAsyncCall();
 //A function where the main function is done
 async function fetchSwitchAmiiboData()
 {
+
     //variables
     const num = parseInt(document.getElementById("numb").value, 10) || 1; //Default to 1 if input is empty or if its 0
     const outputDiv = document.getElementById('dataList');
@@ -83,10 +87,13 @@ async function fetchSwitchAmiiboData()
             <p><strong>Type:</strong> ${JSON.stringify(selectedItem.type)}</p>`
             //If its less than 0 and more than the array length it will display this message plus the entered value
             : `<p>No item found for number ${num}</p>`;
+            console.log("Data displayed successfully ...#3")
     }
+
     //the catch statement that catches errors and displays them to be more readable
     catch(error)
     {
+
         //displays error to the console
         console.error("Error fetching amiibo Data: ", error);
         //displays an error to the page

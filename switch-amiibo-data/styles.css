@@ -13,6 +13,7 @@ body{
     justify-content: center;
     padding: 0 100px;
 }
+
 /*Added a border to the bottom of 3px for width made it solid and the color white*/
 header{
     border-bottom: 3px solid white;

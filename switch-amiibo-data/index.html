@@ -1,24 +1,43 @@
+<!--Initilizing html to html 5 standards-->
 <!DOCTYPE html>
+<!--made the language to be english-->
 <html lang="en">
+    <!--the head of the page that shows the title, adds a styling page and encodes the page-->
     <head>
         <meta charset="UTF-8" />
         <title>Module 5: JS Async and APIs</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
-    <body>
-        <header>
-            <h1>Amiibo Data</h1>
+    <!--A body to add content to the page-->
+    <body aria-label="body" tabindex="1">
+
+        <!--A header to show what the page is about-->
+        <header aria-label="header" tabindex="2">
+            <h1 aria-label="big heading" tabindex="3">Amiibo Data</h1>
         </header>
-        <main>
-            <label for="numb" name="number" aria-label="number">
-                <p>Enter a number between 1 and 927</p>
-            <input type="number" id="numb" name="date" aria-label="inputNumber" placeholder="enter a number between 1-927">
+
+        <!--A container called main to show the central topic of the page-->
+        <main aria-label="main content" tabindex="4">
+           
+            <!--A label to desplay a number input and a text to tell the user to pick within certain numbers-->
+            <label for="numb" name="number" aria-label="label for the number input and text" tabindex="5">
+                <p aria-label="text for the number input" tabindex="6">Enter a number between 1 and 927</p>
+            <input type="number" id="numb" name="number" aria-label="Number input" placeholder="1-197" tabindex="7">
             </label>
-            <button type="submit" id="search" name="search" aria-label="button">Search data</button>
-            <div id="dataList"></div>
+
+            <!--A button to submit the values-->
+            <button type="submit" id="search" name="search" aria-label="button to submit the value from the input" tabindex="8">Search data</button>
+            
+            <!--display the values that correspond to the number chosen by the input-->
+            <div id="dataList" aria-label="The output for data" tabindex="9"></div>
+        
         </main>
-        <footer>
+        
+        <!--The footer to add a copyright to the maker of the page and a trademark to the original location of the api-->
+        <footer aria-label="The footer" tabindex="10">
+            <!--added a javascript file-->
             <script src="script.js"></script>
+            <p aria-label="copyright and trademark" tabindex="11">&copy; Zachary Ross 2025 using a api&trade; from N3evin on github</p>
         </footer>
     </body>
 </html>
