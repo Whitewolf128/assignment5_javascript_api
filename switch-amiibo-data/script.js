@@ -68,7 +68,7 @@ async function fetchSwitchAmiiboData()
         //the way the content displays 
         const selectedItem = numberedData.find(item => item.number == num);
         outputDiv.innerHTML = selectedItem
-            ? `<p><stron>ID:</strong> ${JSON.stringify(selectedItem.number)}</p>
+            ? `<p><strong>You chose the Number:</strong> ${JSON.stringify(selectedItem.number)}</p>
             <p><strong>Amiibo series:</strong> ${JSON.stringify(selectedItem.amiiboSeries)}</p>
             <p><strong>Character:</strong> ${JSON.stringify(selectedItem.character)}</p>
             <p><strong>Game Series:</strong> ${JSON.stringify(selectedItem.gameSeries)}</p>
